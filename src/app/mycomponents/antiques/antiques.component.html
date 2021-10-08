@@ -1,0 +1,55 @@
+<button class="btn btn-primary d-lg-none " id="menu-toggle">Toggle Menu</button>
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-white border border-primary" id="sidebar-wrapper">
+      <div class="sidebar-heading">Filters </div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-white">Price
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-white">End Date
+          <input type="date" id="date">
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-white">Keyword
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-white">Location
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle w-100 my-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              State
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+          
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle w-100 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              District
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" routerlink='ccs'>Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action bg-white">category
+          <button class="btn btn-secondary dropdown-toggle w-100 my-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            select
+          </button>
+        </a>
+        <button class="btn btn-primary m-3" type="button" >
+          Apply Filters
+        </button>
+
+        <button class="btn btn-outline-primary m-3" type="button" >
+          Clear Filters
+        </button>
+
+      </div>
+    </div>
+   
