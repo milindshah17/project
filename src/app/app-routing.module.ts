@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './mycomponents/home/home.component';
 import { RegisterComponent } from './mycomponents/register/register.component';
@@ -10,6 +10,8 @@ import { SlregisterComponent } from './mycomponents/slregister/slregister.compon
 import { AntiquesComponent } from './mycomponents/antiques/antiques.component';
 import { FaqComponent } from './mycomponents/faq/faq.component';
 import { CcsComponent } from './mycomponents/ccs/ccs.component';
+import { AddproductComponent } from './mycomponents/addproduct/addproduct.component';
+import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path:'slregister', component: SlregisterComponent},
   { path:'antiques', component: AntiquesComponent},
   { path:'faq', component: FaqComponent},
-  { path:'ccs', component: CcsComponent}
+  { path:'ccs', component: CcsComponent},
+  { path:'addproduct', component: AddproductComponent},
+  { path:'viewproduct', component: ViewproductComponent }
 
 ];
 

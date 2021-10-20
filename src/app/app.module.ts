@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { SlregisterComponent } from './mycomponents/slregister/slregister.compon
 import { AntiquesComponent } from './mycomponents/antiques/antiques.component';
 import { FaqComponent } from './mycomponents/faq/faq.component';
 import { CcsComponent } from './mycomponents/ccs/ccs.component';
+import { AddproductComponent } from './mycomponents/addproduct/addproduct.component';
+import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
 
 
 
@@ -29,12 +32,16 @@ import { CcsComponent } from './mycomponents/ccs/ccs.component';
     AntiquesComponent,
     FaqComponent,
     CcsComponent,
+    AddproductComponent,
+    ViewproductComponent,
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
