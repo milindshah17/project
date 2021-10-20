@@ -25,7 +25,8 @@ const routes: Routes = [
   { path:'faq', component: FaqComponent},
   { path:'ccs', component: CcsComponent},
   { path:'addproduct', component: AddproductComponent},
-  { path:'viewproduct', component: ViewproductComponent }
+  { path:'viewproduct/:pid', component: ViewproductComponent }
+  
 
 ];
 

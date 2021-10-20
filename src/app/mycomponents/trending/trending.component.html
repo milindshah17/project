@@ -1,18 +1,53 @@
 <h1>trending works!</h1>
-<div class= 'container-fluid m-1 p-1'>
-<div class='border border-primary'>
-    <div class = 'row w-100' >
-        <div class='col-md'>
-test
-        </div>
-        <div class='col-md'>
-<h3>Antique tape recorder</h3>
+<div class='container-fluid m-1 p-1'>
 
-        </div>
+    <div class='border border-primary p-1 m-2' *ngFor='let product of products'>
+        <div class='row w-100'>
+            <div class='col-md'>
+                test
+            </div>
+            <div class='col-md'>
+                <h3><a (click)="openpd(product.Product_id)">{{product.Product_name}}</a></h3>
+                <p class = 'm-3'>Sold by : <br>
+                {{product.seller_name}}<br>
+                {{product.seller_district}}<br>
+               {{product.seller_state}}</p>
 
-        <div class='col-md'>
-            <h6>Current Bid : 10000</h6>
-     </div>
+
+            </div>
+
+            <div class='col-md p-2'>
+                <h4>Current Bid : {{product.Product_minimumprice}}</h4>
+            </div>
+        </div>
     </div>
-</div>
+
+
+
+
+
+
+
+
+
+    <div class='border border-primary p-1'>
+        <div class='row w-100'>
+            <div class='col-md'>
+                test
+            </div>
+            <div class='col-md'>
+                <h3>Antique tape recorder</h3>
+                <p class = 'm-3'>Sold by : <br>
+                 ABC Industries<br>
+                Mumbai<br>
+                Maharashtra</p>
+
+
+            </div>
+
+            <div class='col-md p-2'>
+                <h4>Current Bid : 10000</h4>
+            </div>
+        </div>
+    </div>
 </div>

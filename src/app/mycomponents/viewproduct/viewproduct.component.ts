@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient,HttpParams} from '@angular/common/http';
+import { ActivatedRoute, Params } from '@angular/router';
 
 
 @Component({
@@ -10,14 +11,41 @@ import { HttpClient } from '@angular/common/http';
 export class ViewproductComponent implements OnInit {
 
   product:any;
-  constructor(private http:HttpClient) { }
+  pid=0;
+
+  constructor(private http:HttpClient,
+    private activatedRoute: ActivatedRoute,
+   
+    ) { }
 
   ngOnInit(): void {
 
-    let resp = this.http.get("http://localhost:8080/product?product_id=20  ");
+    this.activatedRoute.params.subscribe((params: Params) => {
+      this.pid = params['pid'];
+      console.log(this.pid);
+      
+    });
+
+   
+
+
+    const baseURL = 'http://localhost:8080/product';
+    const params = new HttpParams()
+	  .set('product_id', this.pid);
+	  
+
+    const fullURL = `${baseURL}?${params}`;
+    console.log({ fullURL });
+ 
+
+    let resp = this.http.get(fullURL);
     resp.subscribe((data)=>console.log(data));
-    let resp2 = this.http.get("http://localhost:8080/product?product_id=20");
+    let resp2 = this.http.get(fullURL);
     resp2.subscribe((data)=>this.product=data);
+    
+    //const params = new HttpParams().append('?product_id', this.pid);
+    //let resp2=this.http.get('http://localhost:8080/product', {params}); 
+    //resp2.subscribe((data)=>this.product=data);
 
   }
 
