@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import{ActivatedRoute} from '@angular/router';
 
-interface Signin {  
-  id: Number;  
-  name: String;  
-  
-}  
+
+ 
 
 @Component({
   selector: 'app-signin',
@@ -16,9 +15,12 @@ interface Signin {
 
 export class SigninComponent implements OnInit {
 
-  users : any;
+  user : any;
 
-  constructor(private http:HttpClient) {
+  constructor(
+    private http:HttpClient,
+    private route:ActivatedRoute,
+    private router:Router,) {
 
     
   }
@@ -32,16 +34,27 @@ export class SigninComponent implements OnInit {
   }
 
   nongOnInit() {
-    let resp = this.http.get("http://localhost:8080/event");
-    resp.subscribe((data)=>console.log(data));
-    let resp2 = this.http.get("http://localhost:8080/event");
-    resp2.subscribe((data)=>this.users=data);
-  
+ 
     
-   
+  }
+  onSubmit(data:any)  {
+    let resp = this.http.post("http://localhost:8080/signin",data);
+    resp.subscribe((data)=>console.log(data));
+    let resp2 = this.http.post("http://localhost:8080/signin",data);
+    resp2.subscribe((data)=>this.user=data);
+    if (!this.user) {
+      console.log("No properties")
+    }
+    else{
+      this.router.navigate(['/'])  
+    }
+    
     
   }
 
 }
+
+
+
 
 

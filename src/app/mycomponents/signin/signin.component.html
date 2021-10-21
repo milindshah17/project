@@ -1,21 +1,21 @@
 <p>signin works!</p>
-<div id='box' class ='col-10 col-md-3 '>
+<div id='box' class='col-10 col-md-3 '>
 
-        <div class='my-1' ><h3> Buyer Login</h3></div>
+    <div class='my-1'>
+        <h3> Buyer Login</h3>
+    </div>
+    <form #signin='ngForm' (ngSubmit)="onSubmit(signin.value)">
     <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" fill="currentColor" class="bi bi-person-circle"
         viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
         <path fill-rule="evenodd"
             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
     </svg>
-    <input type="text" class="form-control my-3" placeholder="username" aria-label="Username">
-    <input type="text" class="form-control my-3" placeholder="password" aria-label="password">
-    <button type="button" class="btn btn-primary my-3" (click)="nongOnInit()" >Submit</button>
+    <input type="text" name="username" ngModel class="form-control my-3" placeholder="username" >
+    <input type="text" name="password" ngModel class="form-control my-3" placeholder="password" >
+    <button type="button" class="btn btn-primary my-3" type="submit">Submit</button>
     <br><a routerLink="/register">new user ? Register here </a>
     <br><a routerLink="/slsignin">Login/register as seller here </a>
-    <div  *ngFor='let users of users'>
-        {{users.seller_id}}
-        {{users.seller_username}}
-    </div>
+    </form>
 
 </div>
