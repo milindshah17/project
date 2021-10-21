@@ -1,5 +1,5 @@
 <!--<p>viewproduct works!</p>-->
-<div class= 'border border-primary rounded m-5 p-2' *ngFor='let product of product' >
+<div class= 'border border-primary rounded m-1 m-lg-5 p-2' *ngFor='let product of product' >
     
     <div class = 'row text-center'>
 
@@ -15,11 +15,11 @@
             <h2><p>{{product.Product_name}}</p></h2>
             <div class = 'row m-2'>
 
-                <div class = col-lg>
+                <div class = 'col-sm'>
                     Current Bid : <h3>₹10000</h3> 
                 </div>
                 
-                <div class = col-lg>
+                <div class = 'col-sm'>
                     Ends in : <h3> 2 Days </h3>
                 </div>
             </div>
@@ -34,7 +34,7 @@
 
              <div class = 'row m-2'>
 
-                <div class = col-lg>
+                <div class = 'col-sm'>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Enter Bid</label>
                         <div class="input-group">
@@ -45,21 +45,21 @@
                     
                 </div>
                 
-                <div class = col-lg>
+                <div class = 'col-sm'>
                     <button type="button" class="btn btn-primary btn-lg">Bid Now</button>
                 </div>
             </div>
 
             <div class = 'row m-2'>
 
-                <div class = col-lg>
+                <div class = 'col-md'>
                     <h4>Contact Seller</h4>
                     <p>{{product.seller_name}}<br>
                     {{product.seller_district}},{{product.seller_state}}<br>
                     PH : {{product.seller_phone}}</p>
                 </div>
                 
-                <div class = col-lg>
+                <div class = 'col-md'>
                     <h4>Payment Options</h4>
                     <p> {{product.Product_paymentoptions}}</p>
                 </div>
