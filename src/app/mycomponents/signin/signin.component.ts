@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import{ActivatedRoute} from '@angular/router';
 
 
+
  
 
 @Component({
@@ -24,8 +25,6 @@ export class SigninComponent implements OnInit {
 
     
   }
-  username= 'true' ;
-  password = 'password test';
  
 
   ngOnInit() {
@@ -33,20 +32,23 @@ export class SigninComponent implements OnInit {
    
   }
 
-  nongOnInit() {
- 
-    
-  }
-  onSubmit(data:any)  {
+  
+  async onSubmit(data:any)  {
     let resp = this.http.post("http://localhost:8080/signin",data);
     resp.subscribe((data)=>console.log(data));
-    let resp2 = this.http.post("http://localhost:8080/signin",data);
-    resp2.subscribe((data)=>this.user=data);
-    if (!this.user) {
+    this.user = await this.http.post("http://localhost:8080/signin",data).toPromise();
+    console.log(this.user);
+    if (Object.keys(this.user).length==0) {
       console.log("No properties")
+      window.alert("wrong Username/Password")
     }
     else{
+      console.log("else statement")
+      var buyer=this.user[0].buyer_id;
+      console.log(buyer);
+      sessionStorage.setItem('buyer',buyer);
       this.router.navigate(['/'])  
+      
     }
     
     

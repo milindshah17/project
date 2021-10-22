@@ -1,18 +1,24 @@
+<app-nav> </app-nav>
 <p>slsignin works!</p>
-<div id='box' class ='col-10 col-md-3 '>
+<form #signin='ngForm' (ngSubmit)="onSubmit(signin.value)">
+    <div id='box' class='col-10 col-md-3 '>
 
-    <div class='my-1' ><h3> Seller Login</h3></div>
-<svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" fill="currentColor" class="bi bi-person-circle"
-    viewBox="0 0 16 16">
-    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-    <path fill-rule="evenodd"
-        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-</svg>
-<input type="text" class="form-control my-3" placeholder="Username" aria-label="Username">
-<input type="text" class="form-control my-3" placeholder="password" aria-label="password">
-<button type="button" class="btn btn-primary my-3 ">Submit</button>
-<br><a routerLink="/slregister">new user ? Register here </a>
-<br><a routerLink="/signin">Login/register as Buyer here </a>
-
+        <div class='my-1'>
+            <h3> Seller Login</h3>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="60%" height="60%" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg>
+        <input type="text" name="username" ngModel class="form-control my-3" placeholder="Username"
+            aria-label="Username">
+        <input type="text" name="password" ngModel class="form-control my-3" placeholder="password"
+            aria-label="password">
+        <button type="button" type="submit" class="btn btn-primary my-3 ">Submit</button>
+        <br><a routerLink="/slregister">new user ? Register here </a>
+        <br><a routerLink="/signin">Login/register as Buyer here </a>
 
 </div>
+</form>
