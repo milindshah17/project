@@ -10,9 +10,11 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
+  user : any;
   login=false;
   buyerlogin=false;
   sellerlogin=false;
+  
 
   constructor(private route:ActivatedRoute,
     private router:Router) { }
@@ -24,17 +26,20 @@ export class NavComponent implements OnInit {
       this.login = false;    
       this.buyerlogin=false;
       this.sellerlogin=false;
+      
     }
     else if (sessionStorage.getItem('buyer')!==null){
       console.log('buyer login')
       this.buyerlogin = true  ; 
       this.login = true;
+      this.user=sessionStorage.getItem('user');
 
     }
     else if (sessionStorage.getItem('seller')!==null){
       console.log('seller login')
       this.sellerlogin = true  ; 
       this.login = true;
+      this.user=sessionStorage.getItem('user');
     }
 
   }

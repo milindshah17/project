@@ -35,8 +35,10 @@ export class SlsigninComponent implements OnInit {
     else{
       console.log("else statement")
       var seller=this.user[0].seller_id;
+      var seller_name=this.user[0].seller_name;
       console.log(seller);
       sessionStorage.setItem('seller',seller);
+      sessionStorage.setItem('user',seller_name);
       this.router.navigate(['/'])  
       
     }
