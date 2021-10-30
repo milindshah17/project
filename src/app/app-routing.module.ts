@@ -12,6 +12,7 @@ import { FaqComponent } from './mycomponents/faq/faq.component';
 import { CcsComponent } from './mycomponents/ccs/ccs.component';
 import { AddproductComponent } from './mycomponents/addproduct/addproduct.component';
 import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
+import { SlviewComponent } from './mycomponents/slview/slview.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path:'faq', component: FaqComponent},
   { path:'ccs', component: CcsComponent},
   { path:'addproduct', component: AddproductComponent},
-  { path:'viewproduct/:pid', component: ViewproductComponent }
+  { path:'viewproduct/:pid', component: ViewproductComponent },
+  { path:'slview', component: SlviewComponent }
   
 
 ];

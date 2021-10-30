@@ -36,6 +36,7 @@ export class RegisterComponent implements OnInit {
     //resp.subscribe((data)=>console.log(data));
     this.user = await this.http.post("http://localhost:8080/register",data).toPromise();
     console.log(this.user);
+    window.alert('registration complete');
     //if (Object.keys(this.user).length==0) {
      // console.log("No properties")
       //window.alert("wrong Username/Password")

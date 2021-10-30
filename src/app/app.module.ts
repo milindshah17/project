@@ -21,6 +21,7 @@ import { CcsComponent } from './mycomponents/ccs/ccs.component';
 import { AddproductComponent } from './mycomponents/addproduct/addproduct.component';
 import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
 import { NavComponent } from './mycomponents/nav/nav.component';
+import { SlviewComponent } from './mycomponents/slview/slview.component';
 
 
 
@@ -40,6 +41,7 @@ import { NavComponent } from './mycomponents/nav/nav.component';
     AddproductComponent,
     ViewproductComponent,
     NavComponent,
+    SlviewComponent,
     
     
   ],

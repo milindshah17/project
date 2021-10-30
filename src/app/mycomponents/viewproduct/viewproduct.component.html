@@ -1,12 +1,12 @@
 <app-nav> </app-nav>
 
 <!--<p>viewproduct works!</p>-->
-<div class= 'border border-primary rounded m-1 m-lg-5 p-2' *ngFor='let product of product' >
+<div class= 'border border-primary rounded m-1 mx-lg-4 my-lg-3 p-2 ' *ngFor='let product of product' >
     
     <div class = 'row text-center'>
 
-        <div class = 'col-lg p-3'>
-            <img src="assets/images/product-img.jpg" class="d-block w-100 rounded" alt="...">
+        <div class = 'col-lg p-3 text-center '>
+            <img src="assets/images/{{product.Product_image}}" class=" img-fluid rounded mx-auto d-block h-75 " alt="...">
 
             <h6 class='m-1'>Starting Bid : {{product.Product_minimumprice}} </h6>
            
@@ -18,7 +18,7 @@
             <div class = 'row m-2'>
 
                 <div class = 'col-sm'>
-                    Current Bid : <h3>₹10000</h3> 
+                    Current Bid : <h3>₹{{product.current_bid}}</h3> 
                 </div>
                 
                 <div class = 'col-sm'>
@@ -39,16 +39,18 @@
                 <div class = 'col-sm'>
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Enter Bid</label>
-                        <div class="input-group">
-                            <span class="input-group-text" id="basic-addon1">₹</span>
-                            <input type="text" class="form-control" placeholder="10,500" aria-label="Username" aria-describedby="basic-addon1">
+                        <div class="mb-3">
+                             <input type="number" id="bidvalue" name="bidvalue" #bidvalue class="form-control" id="exampleFormControlInput1"
+                              placeholder="enter bid here">
                           </div>
                       </div>
+
+                      
                     
                 </div>
                 
                 <div class = 'col-sm'>
-                    <button type="button" class="btn btn-primary btn-lg">Bid Now</button>
+                    <button type="button" (click)="bid(bidvalue.value)" class="btn btn-primary btn-lg">Bid Now</button>
                 </div>
             </div>
 
@@ -74,8 +76,3 @@
     </div>
 </div>
 
-<br><div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Aadhar Number </label>
-    <input type="number" class="form-control" id="exampleFormControlInput1"
-      placeholder="enter aadhar number here">
-  </div>

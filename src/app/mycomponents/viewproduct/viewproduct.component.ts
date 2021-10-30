@@ -12,6 +12,8 @@ export class ViewproductComponent implements OnInit {
 
   product:any;
   pid=0;
+  username: string = '';
+  resp:any;
 
   constructor(private http:HttpClient,
     private activatedRoute: ActivatedRoute,
@@ -27,7 +29,6 @@ export class ViewproductComponent implements OnInit {
     });
 
    
-
 
     const baseURL = 'http://localhost:8080/product';
     const params = new HttpParams()
@@ -49,4 +50,17 @@ export class ViewproductComponent implements OnInit {
 
   }
 
+  async bid(bid:string) {
+    var bidding = { 
+      product_id:this.pid,
+      bidvalue: bid,  
+      buyer_id:sessionStorage.getItem('buyer'),
+      };
+    console.log('it does nothing',bidding);
+    this.resp = await this.http.post("http://localhost:8080/bid",bidding).toPromise();
+    console.log(this.resp);
+    this.ngOnInit();
+  }
+  
+  
 }
