@@ -14,6 +14,10 @@ export class ViewproductComponent implements OnInit {
   pid=0;
   username: string = '';
   resp:any;
+  user : any;
+  login=false;
+  buyerlogin=false;
+  sellerlogin=false;
 
   constructor(private http:HttpClient,
     private activatedRoute: ActivatedRoute,
@@ -27,6 +31,15 @@ export class ViewproductComponent implements OnInit {
       console.log(this.pid);
       
     });
+
+
+    if (sessionStorage.getItem('buyer')!==null){
+      console.log('buyer login')
+      this.buyerlogin = true  ; 
+      this.login = true;
+      this.user=sessionStorage.getItem('user');
+
+    }
 
    
 

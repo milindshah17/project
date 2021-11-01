@@ -1,9 +1,9 @@
 <app-nav> </app-nav>
-<!--<h1>trending works!</h1>-->
+
 <div class='container-fluid m-1 p-1'>
 
     <div class='border border-primary p-1 m-2' *ngFor='let product of products'>
-        <div class='row '>
+        <div class='row w-100'>
             <div class='col-md'>
                 <img src="assets/images/{{product.Product_image}}" class="img-fluid rounded mx-auto d-block" alt="...">
             </div>
@@ -18,8 +18,7 @@
             </div>
 
             <div class='col-md p-2'>
-                <h4>Current Bid : {{product.Product_current_bid}}</h4>
-                <p>Minimum Bid : {{product.Product_minimumprice}}</p>
+                <h4>No bids</h4>
             </div>
         </div>
     </div>
@@ -31,5 +30,3 @@
 
 
 
-
-    

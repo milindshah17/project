@@ -1,5 +1,5 @@
 <app-nav> </app-nav>
-<!--<h1>trending works!</h1>-->
+
 <div class='container-fluid m-1 p-1'>
 
     <div class='border border-primary p-1 m-2' *ngFor='let product of products'>
@@ -9,27 +9,22 @@
             </div>
             <div class='col-md'>
                 <h3><a (click)="openpd(product.Product_id)">{{product.Product_name}}</a></h3>
-                <p class = 'm-3'>Sold by : <br>
+                <!--<p class = 'm-3'>Sold by : <br>
                 {{product.seller_name}}<br>
                 {{product.seller_district}}<br>
-               {{product.seller_state}}</p>
+               {{product.seller_state}}</p> -->
 
 
             </div>
 
             <div class='col-md p-2'>
-                <h4>Current Bid : {{product.Product_current_bid}}</h4>
+                <h4>Your Bid : {{product.Bid}}</h4>
                 <p>Minimum Bid : {{product.Product_minimumprice}}</p>
             </div>
         </div>
     </div>
 
+</div>
 
 
 
-
-
-
-
-
-    

@@ -5,7 +5,7 @@
     <div class='border border-primary p-1 m-2' *ngFor='let product of products'>
         <div class='row w-100'>
             <div class='col-md'>
-                test
+                <img src="assets/images/{{product.Product_image}}" class="img-fluid rounded mx-auto d-block" alt="...">
             </div>
             <div class='col-md'>
                 <h3><a (click)="openpd(product.Product_id)">{{product.Product_name}}</a></h3>
@@ -18,7 +18,8 @@
             </div>
 
             <div class='col-md p-2'>
-                <h4>Current Bid : {{product.Product_minimumprice}}</h4>
+                <h4>Current Bid : {{product.Product_current_bid}}</h4>
+                <p>Minimum Bid : {{product.Product_minimumprice}}</p>
             </div>
         </div>
     </div>
@@ -30,25 +31,3 @@
 
 
 
-
-    <div class='border border-primary p-1'>
-        <div class='row w-100'>
-            <div class='col-md'>
-                test
-            </div>
-            <div class='col-md'>
-                <h3>Antique tape recorder</h3>
-                <p class = 'm-3'>Sold by : <br>
-                 ABC Industries<br>
-                Mumbai<br>
-                Maharashtra</p>
-
-
-            </div>
-
-            <div class='col-md p-2'>
-                <h4>Current Bid : 10000</h4>
-            </div>
-        </div>
-    </div>
-</div>

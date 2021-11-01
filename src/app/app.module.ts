@@ -22,6 +22,11 @@ import { AddproductComponent } from './mycomponents/addproduct/addproduct.compon
 import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
 import { NavComponent } from './mycomponents/nav/nav.component';
 import { SlviewComponent } from './mycomponents/slview/slview.component';
+import { TcnsComponent } from './mycomponents/tcns/tcns.component';
+import { UnsoldComponent } from './mycomponents/unsold/unsold.component';
+import { BidsComponent } from './mycomponents/bids/bids.component';
+import { CategoryComponent } from './mycomponents/category/category.component';
+import { SearchComponent } from './mycomponents/search/search.component';
 
 
 
@@ -42,6 +47,11 @@ import { SlviewComponent } from './mycomponents/slview/slview.component';
     ViewproductComponent,
     NavComponent,
     SlviewComponent,
+    TcnsComponent,
+    UnsoldComponent,
+    BidsComponent,
+    CategoryComponent,
+    SearchComponent,
     
     
   ],

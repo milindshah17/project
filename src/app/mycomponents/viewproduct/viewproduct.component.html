@@ -22,7 +22,7 @@
                 </div>
                 
                 <div class = 'col-sm'>
-                    Ends in : <h3> 2 Days </h3>
+                    Ends on : <h3> {{product.Product_endtime}} </h3>
                 </div>
             </div>
              
@@ -34,7 +34,7 @@
 
              </div>
 
-             <div class = 'row m-2'>
+             <div class = 'row m-2'*ngIf="buyerlogin">
 
                 <div class = 'col-sm'>
                     <div class="mb-3">
@@ -50,7 +50,7 @@
                 </div>
                 
                 <div class = 'col-sm'>
-                    <button type="button" (click)="bid(bidvalue.value)" class="btn btn-primary btn-lg">Bid Now</button>
+                    <button type="button"  (click)="bid(bidvalue.value)" class="btn btn-primary btn-lg">Bid Now</button>
                 </div>
             </div>
 

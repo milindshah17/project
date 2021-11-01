@@ -13,6 +13,11 @@ import { CcsComponent } from './mycomponents/ccs/ccs.component';
 import { AddproductComponent } from './mycomponents/addproduct/addproduct.component';
 import { ViewproductComponent } from './mycomponents/viewproduct/viewproduct.component';
 import { SlviewComponent } from './mycomponents/slview/slview.component';
+import { TcnsComponent } from './mycomponents/tcns/tcns.component';
+import { UnsoldComponent } from './mycomponents/unsold/unsold.component';
+import { BidsComponent } from './mycomponents/bids/bids.component';
+import { CategoryComponent } from './mycomponents/category/category.component';
+import { SearchComponent } from './mycomponents/search/search.component';
 
 const routes: Routes = [
   { path: 'signin', component: SigninComponent },
@@ -27,7 +32,13 @@ const routes: Routes = [
   { path:'ccs', component: CcsComponent},
   { path:'addproduct', component: AddproductComponent},
   { path:'viewproduct/:pid', component: ViewproductComponent },
-  { path:'slview', component: SlviewComponent }
+  { path:'slview', component: SlviewComponent },
+  { path:'tcns', component: TcnsComponent },
+  { path:'unsold', component: UnsoldComponent },
+  { path:'bids', component: BidsComponent },
+  { path:'category/:cat', component: CategoryComponent },
+  { path:'search/:keyword', component: SearchComponent }
+  
   
 
 ];
